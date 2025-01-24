@@ -1,0 +1,320 @@
+
+/* Cards */
+.container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 40px auto;
+  max-width: 1600px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 40px;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.divlv1 {
+  background-color: #35535c;
+  padding: 15px 15px 40px;  
+  box-shadow: 10px 5px 5px rgb(31, 30, 30);
+}
+
+.foto {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+}
+
+.foto2 {
+  width: 100%;
+  max-height: 70ch;
+  object-fit: cover;
+}
+@media only screen and (max-width: 412px) {
+  .foto2 {
+  width: 100%;
+  max-height: 34ch;
+  object-fit: cover;
+}
+}
+
+.textinho {
+  margin-top: 10px;
+}
+
+.link1 {
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #b90230;
+  color: #fff;
+  border-radius: 3px;
+  display:block;
+  text-decoration: none;
+  cursor: pointer;
+  
+  }
+
+  .link2 {
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #05682b;
+    color: #fff;
+    border-radius: 3px;
+    display:block;
+    text-decoration: none;
+    cursor: pointer;
+    
+    }
+
+    .link3 {
+      box-sizing: border-box;
+      padding: 20px;
+      background-color: #4682B4;
+      color: #fff;
+      border-radius: 3px;
+      display:block;
+      text-decoration: none;
+      cursor: pointer;
+      
+      }
+/* end Cards */
+
+      /* modal */
+      .modalbody {
+        color: black;
+        margin: 0;
+        padding: 0;
+        background-image: url(../img/back.png);
+        
+        background-size: cover;
+        max-width: 300%;
+        height: 290px;
+        height: auto;
+      }
+
+      .modalcontainer {
+        
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        margin: 40px auto;
+        max-width: 4800px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+        grid-column-gap: 20px;
+        grid-row-gap: 40px;
+        justify-content: center;
+        padding: 0 20px;
+      }
+
+       /* Small screens */
+       @media only screen and (max-width: 1270px) {
+        .modalcontainer2
+        {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        margin: 40px auto;
+        max-width: 1800px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(310px, 1080px));
+        grid-column-gap: 20px;
+        grid-row-gap: 40px;
+        justify-content: center;
+        padding: 0 20px;
+        }
+
+        
+      }
+
+      .divlv2 {
+        background-color: #35535c;
+        padding: 15px 15px 40px;
+        box-shadow: 6px 5px 5px black;
+      }
+
+      .divlv3 {
+        background-color: #35535c;
+        padding: 15px 15px 40px;
+        box-shadow: 6px 5px 5px black;
+      }
+
+      .divlv4 {
+        background-color: #35535c;
+      }
+
+      .fonterpg
+      {
+        font-family: 'rpg';
+        font-size: 30px;
+      }
+
+      .img1
+      {
+        padding: 0 16px;
+        height: 49;
+        width: 49; 
+       }
+       .img2
+       {
+         height: 19px;
+         width: 19px;
+        }
+        .img3
+        {
+          height: 49px;
+          width: 49px;
+         }
+         .img4
+         {
+          height: 1.5rem;
+          width: 1.5rem;
+         }
+
+        /* table */
+
+        td,
+th {
+    border: 2px solid rgb(190, 190, 190);
+    padding: 5px;
+}
+
+td {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #eee;
+}
+
+th[scope="col"] {
+    background-color: #696969;
+    color: #fff;
+}
+
+th[scope="row"] {
+    background-color: #d7d9f2;
+}
+
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-size: .8rem;
+}
+ /*end table */
+
+.titulo1
+{
+  font-size: 36px;
+}
+
+.titulo2
+{
+  text-align: center;
+}
+
+.titulo3
+{
+  position: relative;
+  font-size: 13px;
+  text-decoration: solid;
+}
+
+.titlecontainer
+{
+  position: relative;
+}
+
+.grid {
+  padding: 5px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1080px));
+}
+
+.gridinho {
+  display: grid;  
+  grid-template-columns: repeat(auto-fit, minmax(10px,1000px));
+}
+
+.item {
+  padding: 10px;
+  background-color: rgb(236, 235, 235);
+}
+
+.item.item-0 {
+  padding: 5px;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.item.item-10 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.gridiv
+{
+  padding: 5px;
+  display: grid;
+  grid-gap: 5px;
+}
+
+.corn1
+{
+  background-color: #b90230;
+}
+.corn2
+{
+  background-color: #05682b;
+}
+.corn3
+{
+  background-color: #4682B4;
+}
+
+.flex
+{
+  display: flex;
+  text-align: center;
+}
+.flex-1
+{
+  display: flex;
+  justify-content: space-between;
+  padding: 4px;
+}
+
+
+/* grid magias */
+.grid2 {
+  padding: 1px;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(100%,100%));
+}
+
+.divhover {
+  padding: 1.5px;
+  display: none;
+  transition: .3s;
+}
+
+
+.hovinnho:hover + section {
+  opacity: 1;
+  display: block;
+  width: 99%;
+}
+
+
+.hovinnho:hover{
+  opacity: 1;
+  }
+/* end grid magias */
