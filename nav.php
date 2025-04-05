@@ -40,7 +40,7 @@
 
       <li class="nav-item">
         <a href="#" class="nav-link">
-        <img class="img1 nav-link nav-link:hover"  fill="currentColor" src="https://img.icons8.com/fluency/48/000000/crusader.png"/>
+        <img class="img1" data-icon="crusader" src="https://img.icons8.com/fluency/48/000000/crusader.png" />
          
           <span class="link-text">Personagem</span>
         </a>
@@ -48,7 +48,7 @@
 
       <li class="nav-item">  
         <a href="index.php" class="nav-link">
-        <img class="img1 nav-link nav-link:hover"  fill="currentColor" src="https://img.icons8.com/fluency/48/000000/angel-with-sword.png"/>
+        <img class="img1" data-icon="angel-with-sword" src="https://img.icons8.com/fluency/48/000000/angel-with-sword.png" />
           <span class="link-text">Classes</span>
         </a>
       </li>
@@ -84,7 +84,7 @@
 
       <li class="nav-item">
         <a href="#" class="nav-link">
-        <img class="img1 nav-link nav-link:hover" src="https://img.icons8.com/fluency/50/000000/gatling-gun.png"/>  
+        <img class="img1" data-icon="gatling-gun" src="https://img.icons8.com/fluency/48/000000/gatling-gun.png" />  
           <span class="link-text">Sistema</span>
         </a>
       </li>
