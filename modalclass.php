@@ -33,8 +33,7 @@ switch($classe['tipo_classe']) {
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet" />
 </head>
 
-<body class="modalbody">
-<?php include 'nav.php' ?>   
+<body class="modalbody">  
 
 <main>
 <div class="modalcontainer">
@@ -154,7 +153,7 @@ switch($classe['tipo_classe']) {
                 while($t = $consT->fetch(PDO::FETCH_ASSOC)) { ?>
                     <tr>
                         <td style="text-align:center"><b><?php echo $t['lvl_talento']; ?></b></td>
-                        <td style="font-size:14px"><b><?php echo $t['nm_talento']; ?></b></td>
+                        <td style="font-size:12px"><b><?php echo $t['nm_talento']; ?></b></td>
                         <td style="font-size:12px"><?php echo $t['ds_talento']; ?></td>
                     </tr>
                 <?php } ?>

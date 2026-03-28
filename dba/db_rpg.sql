@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 26-Fev-2022 às 04:20
--- Versão do servidor: 10.4.22-MariaDB
--- versão do PHP: 8.1.2
+-- Tempo de geração: 28/03/2026 às 15:53
+-- Versão do servidor: 10.4.32-MariaDB
+-- Versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_classe`
+-- Estrutura para tabela `tbl_classe`
 --
 
 CREATE TABLE `tbl_classe` (
@@ -48,50 +48,51 @@ CREATE TABLE `tbl_classe` (
   `cres_life` int(11) NOT NULL,
   `cres_mana` int(11) NOT NULL,
   `cd.classe_vantagem` int(11) NOT NULL,
-  `cd.classe_desvantagem` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `cd.classe_desvantagem` int(11) NOT NULL,
+  `cd_classe_vantagem` int(11) DEFAULT NULL,
+  `cd_classe_desvantagem` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Extraindo dados da tabela `tbl_classe`
+-- Despejando dados para a tabela `tbl_classe`
 --
 
-INSERT INTO `tbl_classe` (`cd_classe`, `nm_classe`, `tipo_classe`, `ds_classe`, `img_classe`, `classe_for`, `classe_dex`, `classe_int`, `classe_life`, `classe_mana`, `classe_char`, `class_res_for`, `class_res_dex`, `class_res_int`, `cres_for`, `cres_dex`, `cres_int`, `cres_life`, `cres_mana`, `cd.classe_vantagem`, `cd.classe_desvantagem`) VALUES
-(1, '1', 1, 'Texto pendente de edição, versão generica em live', '1', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0),
-(2, 'Guerreiro', 1, 'Texto pendente de edição, versão generica em live', 'guerreiro.png', 5, 3, 2, 15, 5, 3, 10, 7, 7, 2, 2, 1, 5, 1, 1, 1),
-(3, 'Duelista', 1, 'Texto pendente de edição, versão generica em live', 'duelista3.png', 3, 4, 2, 10, 5, 3, 10, 10, 5, 1, 2, 1, 3, 2, 0, 0),
-(4, 'Barbaro', 1, 'Texto pendente de edição, versão generica em live', 'barbaro2.jpg', 5, 3, 1, 14, 3, 1, 12, 10, 5, 2, 2, 1, 5, 0, 0, 0),
-(5, 'Guardiao', 1, 'Texto pendente de edição, versão generica em live', 'guardiao10.jpg', 8, 1, 1, 18, 5, 1, 14, 8, 8, 3, 1, 0, 6, 1, 0, 0),
-(6, 'Cavaleiro', 1, 'Texto pendente de edição, versão generica em live', 'cavaleiro3.jpg', 5, 2, 4, 13, 3, 5, 10, 10, 5, 2, 2, 2, 4, 2, 0, 0),
-(7, 'Monge', 1, 'Texto pendente de edição, versão generica em live', 'monge3.png', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0, 0),
-(8, 'Paladino', 1, 'Texto pendente de edição, versão generica em live', 'paladino2.jpg', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0, 0),
-(9, 'Samurai', 1, 'Texto pendente de edição, versão generica em live', 'samurai2.jpg', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0, 0),
-(10, 'Arqueiro', 2, 'Texto pendente de edição, versão generica em live', 'arqueiro2.jpg', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0, 0),
-(11, 'Ladino', 2, 'Texto pendente de edição, versão generica em live', 'ladino2.png', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5),
-(12, 'Ninja', 2, 'Texto pendente de edição, versão generica em live', 'ninja2.png', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5),
-(13, 'Bardo', 2, 'Texto pendente de edição, versão generica em live', 'bardo2.jpg', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5),
-(14, 'Ilusionista', 2, 'Texto pendente de edição, versão generica em live', 'ilusionista3.jpg', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5),
-(15, 'Mago', 3, 'Texto pendente de edição, versão generica em live', 'mago.jpg', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5),
-(16, 'Engenheiro', 3, 'Texto pendente de edição, versão generica em live', 'engenheiro3.jpg', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5),
-(17, 'Feiticeiro', 3, 'Texto pendente de edição, versão generica em live', 'feiticeiro2.jpg', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5),
-(18, 'Arcano', 3, 'Texto pendente de edição, versão generica em live', 'arcano.jpg', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5),
-(19, 'Necromante', 3, 'Texto pendente de edição, versão generica em live', 'necromante2.png', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5),
-(20, 'Piromante', 3, 'Texto pendente de edição, versão generica em live', 'piromante.png', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5),
-(21, 'Cronomancer', 3, 'Texto pendente de edição, versão generica em live', 'cronomancer3.jpg', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5);
+INSERT INTO `tbl_classe` (`cd_classe`, `nm_classe`, `tipo_classe`, `ds_classe`, `img_classe`, `classe_for`, `classe_dex`, `classe_int`, `classe_life`, `classe_mana`, `classe_char`, `class_res_for`, `class_res_dex`, `class_res_int`, `cres_for`, `cres_dex`, `cres_int`, `cres_life`, `cres_mana`, `cd.classe_vantagem`, `cd.classe_desvantagem`, `cd_classe_vantagem`, `cd_classe_desvantagem`) VALUES
+(2, 'Guerreiro', 1, 'Texto pendente de edição, versão generica em live', 'guerreiro.png', 5, 3, 2, 15, 5, 3, 10, 7, 7, 2, 2, 1, 5, 1, 1, 1, NULL, NULL),
+(3, 'Duelista', 1, 'Texto pendente de edição, versão generica em live', 'duelista3.png', 3, 4, 2, 10, 5, 3, 10, 10, 5, 1, 2, 1, 3, 2, 0, 0, NULL, NULL),
+(4, 'Barbaro', 1, 'Texto pendente de edição, versão generica em live', 'barbaro2.jpg', 5, 3, 1, 14, 3, 1, 12, 10, 5, 2, 2, 1, 5, 0, 0, 0, NULL, NULL),
+(5, 'Guardiao', 1, 'Texto pendente de edição, versão generica em live', 'guardiao10.jpg', 8, 1, 1, 18, 5, 1, 14, 8, 8, 3, 1, 0, 6, 1, 0, 0, NULL, NULL),
+(6, 'Cavaleiro', 1, 'Texto pendente de edição, versão generica em live', 'cavaleiro3.jpg', 5, 2, 4, 13, 3, 5, 10, 10, 5, 2, 2, 2, 4, 2, 0, 0, NULL, NULL),
+(7, 'Monge', 1, 'Texto pendente de edição, versão generica em live', 'monge3.png', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0, 0, NULL, NULL),
+(8, 'Paladino', 1, 'Texto pendente de edição, versão generica em live', 'paladino2.jpg', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0, 0, NULL, NULL),
+(9, 'Samurai', 1, 'Texto pendente de edição, versão generica em live', 'samurai2.jpg', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0, 0, NULL, NULL),
+(10, 'Arqueiro', 2, 'Texto pendente de edição, versão generica em live', 'arqueiro2.jpg', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0, 0, NULL, NULL),
+(11, 'Ladino', 2, 'Texto pendente de edição, versão generica em live', 'ladino2.png', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, NULL, NULL),
+(12, 'Ninja', 2, 'Texto pendente de edição, versão generica em live', 'ninja2.png', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, NULL, NULL),
+(13, 'Bardo', 2, 'Texto pendente de edição, versão generica em live', 'bardo2.jpg', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, NULL, NULL),
+(14, 'Ilusionista', 2, 'Texto pendente de edição, versão generica em live', 'ilusionista3.jpg', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, NULL, NULL),
+(15, 'Mago', 3, 'Texto pendente de edição, versão generica em live', 'mago.jpg', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, NULL, NULL),
+(16, 'Engenheiro', 3, 'Texto pendente de edição, versão generica em live', 'engenheiro3.jpg', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, NULL, NULL),
+(17, 'Feiticeiro', 3, 'Texto pendente de edição, versão generica em live', 'feiticeiro2.jpg', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, NULL, NULL),
+(18, 'Arcano', 3, 'Texto pendente de edição, versão generica em live', 'arcano.jpg', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, NULL, NULL),
+(19, 'Necromante', 3, 'Texto pendente de edição, versão generica em live', 'necromante2.png', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, NULL, NULL),
+(20, 'Piromante', 3, 'Texto pendente de edição, versão generica em live', 'piromante.png', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, NULL, NULL),
+(21, 'Cronomancer', 3, 'Texto pendente de edição, versão generica em live', 'cronomancer3.jpg', 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_classe_desvantagens`
+-- Estrutura para tabela `tbl_classe_desvantagens`
 --
 
 CREATE TABLE `tbl_classe_desvantagens` (
   `cd` int(11) NOT NULL,
   `cd_classe` int(11) DEFAULT NULL,
   `cd_desvantagem` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Extraindo dados da tabela `tbl_classe_desvantagens`
+-- Despejando dados para a tabela `tbl_classe_desvantagens`
 --
 
 INSERT INTO `tbl_classe_desvantagens` (`cd`, `cd_classe`, `cd_desvantagem`) VALUES
@@ -115,17 +116,54 @@ INSERT INTO `tbl_classe_desvantagens` (`cd`, `cd_classe`, `cd_desvantagem`) VALU
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_classe_vantagens`
+-- Estrutura para tabela `tbl_classe_talentos`
+--
+
+CREATE TABLE `tbl_classe_talentos` (
+  `id` int(11) NOT NULL,
+  `cd_classe` int(11) DEFAULT NULL,
+  `cd_talento` int(11) DEFAULT NULL,
+  `lvl_talento` int(11) NOT NULL DEFAULT 1
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `tbl_classe_talentos`
+--
+
+INSERT INTO `tbl_classe_talentos` (`id`, `cd_classe`, `cd_talento`, `lvl_talento`) VALUES
+(1, 2, 1, 1),
+(2, 2, 2, 1),
+(3, 2, 3, 2),
+(4, 2, 4, 2),
+(5, 2, 5, 3),
+(6, 2, 6, 3),
+(7, 2, 7, 4),
+(8, 2, 8, 4),
+(9, 2, 9, 5),
+(10, 2, 10, 6),
+(11, 2, 11, 6),
+(12, 2, 12, 7),
+(13, 2, 13, 7),
+(14, 2, 14, 8),
+(15, 2, 15, 8),
+(16, 2, 16, 9),
+(17, 2, 17, 9),
+(18, 2, 18, 10);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `tbl_classe_vantagens`
 --
 
 CREATE TABLE `tbl_classe_vantagens` (
   `cd` int(11) NOT NULL,
   `cd_classe` int(11) DEFAULT NULL,
   `cd_vantagem` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Extraindo dados da tabela `tbl_classe_vantagens`
+-- Despejando dados para a tabela `tbl_classe_vantagens`
 --
 
 INSERT INTO `tbl_classe_vantagens` (`cd`, `cd_classe`, `cd_vantagem`) VALUES
@@ -165,17 +203,17 @@ INSERT INTO `tbl_classe_vantagens` (`cd`, `cd_classe`, `cd_vantagem`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_desvantagens`
+-- Estrutura para tabela `tbl_desvantagens`
 --
 
 CREATE TABLE `tbl_desvantagens` (
   `cd_desvantagem` int(11) NOT NULL,
   `nm_desvantagem` varchar(50) NOT NULL,
   `ds_desvantagem` varchar(2000) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Extraindo dados da tabela `tbl_desvantagens`
+-- Despejando dados para a tabela `tbl_desvantagens`
 --
 
 INSERT INTO `tbl_desvantagens` (`cd_desvantagem`, `nm_desvantagem`, `ds_desvantagem`) VALUES
@@ -194,17 +232,17 @@ INSERT INTO `tbl_desvantagens` (`cd_desvantagem`, `nm_desvantagem`, `ds_desvanta
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_imgclasse`
+-- Estrutura para tabela `tbl_imgclasse`
 --
 
 CREATE TABLE `tbl_imgclasse` (
   `cd` int(11) NOT NULL,
   `cd_classe` int(11) NOT NULL,
   `img_classe` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Extraindo dados da tabela `tbl_imgclasse`
+-- Despejando dados para a tabela `tbl_imgclasse`
 --
 
 INSERT INTO `tbl_imgclasse` (`cd`, `cd_classe`, `img_classe`) VALUES
@@ -239,45 +277,141 @@ INSERT INTO `tbl_imgclasse` (`cd`, `cd_classe`, `img_classe`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_raca`
+-- Estrutura para tabela `tbl_raca`
 --
 
 CREATE TABLE `tbl_raca` (
   `cd_raca` int(11) NOT NULL,
-  `nm_raca` varchar(25) NOT NULL,
-  `tipo_raca` int(11) NOT NULL,
-  `ds_raca` varchar(1000) NOT NULL,
-  `img_raca` varchar(100) NOT NULL,
+  `nm_raca` varchar(50) NOT NULL,
+  `ds_raca` varchar(300) NOT NULL,
   `raca_for` int(11) NOT NULL,
   `raca_dex` int(11) NOT NULL,
   `raca_int` int(11) NOT NULL,
   `raca_life` int(11) NOT NULL,
   `raca_mana` int(11) NOT NULL,
-  `raca_char` int(11) NOT NULL,
-  `raca_res_for` int(11) NOT NULL,
-  `raca_res_dex` int(11) NOT NULL,
-  `raca_res_int` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `img_raca` varchar(200) NOT NULL,
+  `tamanho_raca` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `tbl_raca`
+--
+
+INSERT INTO `tbl_raca` (`cd_raca`, `nm_raca`, `ds_raca`, `raca_for`, `raca_dex`, `raca_int`, `raca_life`, `raca_mana`, `img_raca`, `tamanho_raca`) VALUES
+(1, 'Esqueleto', 'Texto generico em live', 0, 5, 9, 15, 25, 'Gravebane.webp', 'Humanoide'),
+(2, 'Humano', 'Texto generico em live', 6, 6, 6, 20, 20, 'h.jpg', 'Humanoide'),
+(3, 'Minotauro', 'Texto generico em live', 15, 6, 15, 25, 25, 'minotauro.jpg', 'Grande'),
+(4, 'Drow Elfo', 'Texto generico em live', 5, 5, 5, 5, 5, 'arqueiro2.jpg\r\n', 'Padrão');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_vantagens`
+-- Estrutura para tabela `tbl_talentos`
+--
+
+CREATE TABLE `tbl_talentos` (
+  `cd_talento` int(11) NOT NULL,
+  `nm_talento` varchar(50) DEFAULT NULL,
+  `ds_talento` varchar(300) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `tbl_talentos`
+--
+
+INSERT INTO `tbl_talentos` (`cd_talento`, `nm_talento`, `ds_talento`) VALUES
+(26, 'Acrobata Avançado', 'Pode duas vezes por oponente ataca realizando acrobacias ataques com acrobacia realização teste contra Agilidade não contra a CA'),
+(27, 'Adaptação', 'Como um combatente nato não sofre desvantagens de terreno.'),
+(10, 'Arma Maior', 'Pode utilizar com 2 mãos uma Arma de uma categoria maior do que seu tamanho ao custo de -4 em Rolagens de ataque de acertar'),
+(14, 'Arquetipo do Combate', 'Escolhe uma arma, escudo ou Armadura para ser sua especialização adicionando Força e Destreza como modificador para qualquer rolagem.'),
+(29, 'Atacante de Taberna', 'Pode atacar como reação livre utilizando objetos improvisados -2 nas rolagens de dano.'),
+(24, 'Combate com Duas Mãos', 'Pode atacar utilizando a mão inabil com -2 nas rolagens de ataque.'),
+(28, 'Combate com Duas Mãos Avançado', 'Sua mão inabil se torna uma mão habil.'),
+(20, 'Combatente Agil', 'Pode usar agilidade ao inves de força para armas corpo a corpo'),
+(9, 'Combatente Experiente', 'Ganha uma ação Extra toda rodada'),
+(16, 'Combatente Mestre', 'Ganha uma segunda ação Extra toda rodada'),
+(5, 'Corpo Fechado', 'Chance de ficar imune a Stun se rolar 1 no (1d3) se caso tenha sucesso o Stun é convertido em uma redução de movimento de 50%'),
+(11, 'Corpo Fechado Avançado', 'Chance de ficar imune a Stun se rolar 2 no (1d3) caso tenha sucesso o Stun. Caso seja stunado uma vez em combate se torna imune a stun até o fim dele.'),
+(35, 'Corrida Vertical', 'Pode utilizar metade da sua movimentação como movimento vertical, até em superficies lisas.'),
+(3, 'Critico Aprimorado', 'Aumenta a chance de critico em +1'),
+(7, 'Critico Aprimorado Avançado', 'Aumenta a chance de critico em +1'),
+(12, 'Critico Aprimorado Metre', 'Aumenta a chance de critico em +2'),
+(15, 'Dano Critico Aprimorado', 'Aprimora um multiplicado de dano critico.'),
+(36, 'Duelista Completo', 'Ganha todos os talentos da Classe Duelista.'),
+(32, 'Esquiva Sobrenatural', 'Recebe todo seu bonus de agilidade como classe de armadura para CA.'),
+(2, 'Estilo de Luta', 'Pode escolher entre os estilos de Luta: Arquearia, duelismo, Defesa, Combate com Arma Maior'),
+(13, 'Generalista em Força', 'Compra qualquer Vantagem de qualquer classe baseada em FORÇA até seu lvl atual. Obrigado a Comprar uma desvantagem da Classe na sorte'),
+(17, 'Generalista em Força Aprimorado', 'Compra qualquer Vantagem de qualquer classe baseada em FORÇA até seu lvl atual.'),
+(18, 'Guerreiro Completo', 'Ganha todos os talentos da Classe Guerreiro'),
+(8, 'Indomavel', 'Caso Falhe em um Teste de Resistencia a efeitos ou manobra pode rolar o teste Novamente 1 vez ao dia'),
+(22, 'Instinto Aguçado', 'Se sofrer um ataque furtivo ou critico, rola (1d3) para pular a Fila de ação no combate uma vez por luta.'),
+(30, 'Instinto Aguçado avançado', 'Se sofrer um ataque furtivo ou critico, rola (1d2) para pular a Fila de ação no combate e recebe um turno extra uma vez por luta.'),
+(6, 'Manobra de Combate Avançada', 'Dobra a quantidade de pontos de tecnica recebida por LVL (funciona retroativamente)'),
+(25, 'Oleomancia', 'Pode produzir oleos para infurdir seus equipamentos. Ganha (1d4) de bonus para produção.'),
+(21, 'Rastreador', 'Tem bonus de (2d4) em testes de percepção referente a localização de alvos e objetos.'),
+(33, 'Rastreador Avançado', 'Tem bonus de (4d4) em testes de percepção referente a localização de alvos e objetos, Recebe Visão verdadeira'),
+(23, 'Reflexo Sobrenatural', 'Ao receber um ataque fisico a distancia o oponente tem -2 nas rolagens de ataque como desvantagem.'),
+(31, 'Reflexo Sobrenatural Avançado', 'Ao receber um ataque fisico ou magico a distancia o oponente tem -4 nas rolagens de ataque como desvantagem.'),
+(1, 'Tecnica de Combate', 'Pode realizar tecnicas de combate especiais, começa com 2 pontos de Tecnica e ganha +1 ponto a cada nivel'),
+(4, 'Vantagem Nata', 'Pode Comprar uma Vantagem de combate adicional.'),
+(34, 'Vantajoso', 'Não recebe as desvantagens de classes de força');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `tbl_tamanho`
+--
+
+CREATE TABLE `tbl_tamanho` (
+  `cd_tamanho` int(11) NOT NULL,
+  `nm_tamanho` varchar(20) DEFAULT NULL,
+  `movimento_tamanho` float DEFAULT NULL,
+  `iniciativa_tamanho` varchar(20) DEFAULT NULL,
+  `furtividade_tamanho` varchar(20) DEFAULT NULL,
+  `ca_tamanho` float DEFAULT NULL,
+  `espaco_ocupado_tamanho` float DEFAULT NULL,
+  `resist_tamanho` varchar(20) DEFAULT NULL,
+  `modforca_tamanho` float DEFAULT NULL,
+  `moddano_1d2` varchar(10) DEFAULT NULL,
+  `moddano_1d3` varchar(10) DEFAULT NULL,
+  `moddano_1d4` varchar(10) DEFAULT NULL,
+  `moddano_1d6` varchar(10) DEFAULT NULL,
+  `moddano_1d8` varchar(10) DEFAULT NULL,
+  `moddano_1d10` varchar(10) DEFAULT NULL,
+  `moddano_1d12` varchar(10) DEFAULT NULL,
+  `moddano_2d4` varchar(10) DEFAULT NULL,
+  `moddano_3d4` varchar(10) DEFAULT NULL,
+  `moddano_2d6` varchar(10) DEFAULT NULL,
+  `moddano_2d8` varchar(10) DEFAULT NULL,
+  `moddano_2d10` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `tbl_tamanho`
+--
+
+INSERT INTO `tbl_tamanho` (`cd_tamanho`, `nm_tamanho`, `movimento_tamanho`, `iniciativa_tamanho`, `furtividade_tamanho`, `ca_tamanho`, `espaco_ocupado_tamanho`, `resist_tamanho`, `modforca_tamanho`, `moddano_1d2`, `moddano_1d3`, `moddano_1d4`, `moddano_1d6`, `moddano_1d8`, `moddano_1d10`, `moddano_1d12`, `moddano_2d4`, `moddano_3d4`, `moddano_2d6`, `moddano_2d8`, `moddano_2d10`) VALUES
+(1, 'Medio', 3, 'Padrão', '0', 0, 1, '0', 0, '1d2', '1d3', '1d4', '1d6', '1d8', '1d10', '1d12', '2d4', '3d4', '2d6', '2d8', '2d10');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `tbl_vantagens`
 --
 
 CREATE TABLE `tbl_vantagens` (
   `cd_vantagem` int(11) NOT NULL,
   `nm_vantagem` varchar(50) NOT NULL,
   `ds_vantagem` varchar(2000) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Extraindo dados da tabela `tbl_vantagens`
+-- Despejando dados para a tabela `tbl_vantagens`
 --
 
 INSERT INTO `tbl_vantagens` (`cd_vantagem`, `nm_vantagem`, `ds_vantagem`) VALUES
 (1, 'Guarda alta', 'Tem bônus de redução de dano para qualquer ataque estilo projétil mágico ou físico.'),
-(2, 'Golpe certeiro', ' 25% de debilitar movimentação do alvo, não permitindo usar furtividade ou movimentação'),
+(2, 'Golpe certeiro', '20% de debilitar movimentação do alvo, não permitindo usar furtividade ou movimentação'),
 (3, 'Forte', 'Tem 100% de bônus adicional em teste de força, tem 50% de bônus adicional de vida.'),
 (4, 'Armadura pesada', 'Não recebe debuff de movimentação por sobre peso, e é imune a stun'),
 (7, 'Duas mãos', 'Permite usar 2 armas curtas causando 50% de dano da primeira arma e 50% da segunda arma.(rola 2 dados)'),
@@ -310,8 +444,8 @@ INSERT INTO `tbl_vantagens` (`cd_vantagem`, `nm_vantagem`, `ds_vantagem`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura stand-in para vista `vw_desvantages`
--- (Veja abaixo para a view atual)
+-- Estrutura stand-in para view `vw_desvantages`
+-- (Veja abaixo para a visão atual)
 --
 CREATE TABLE `vw_desvantages` (
 `cd` int(11)
@@ -324,8 +458,22 @@ CREATE TABLE `vw_desvantages` (
 -- --------------------------------------------------------
 
 --
--- Estrutura stand-in para vista `vw_vantagens`
--- (Veja abaixo para a view atual)
+-- Estrutura stand-in para view `vw_talentos`
+-- (Veja abaixo para a visão atual)
+--
+CREATE TABLE `vw_talentos` (
+`cd_classe` int(11)
+,`cd_talento` int(11)
+,`nm_talento` varchar(50)
+,`ds_talento` varchar(300)
+,`lvl_talento` int(11)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura stand-in para view `vw_vantagens`
+-- (Veja abaixo para a visão atual)
 --
 CREATE TABLE `vw_vantagens` (
 `cd` int(11)
@@ -338,7 +486,7 @@ CREATE TABLE `vw_vantagens` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para vista `vw_desvantages`
+-- Estrutura para view `vw_desvantages`
 --
 DROP TABLE IF EXISTS `vw_desvantages`;
 
@@ -347,7 +495,16 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- --------------------------------------------------------
 
 --
--- Estrutura para vista `vw_vantagens`
+-- Estrutura para view `vw_talentos`
+--
+DROP TABLE IF EXISTS `vw_talentos`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_talentos`  AS SELECT `ct`.`cd_classe` AS `cd_classe`, `t`.`cd_talento` AS `cd_talento`, `t`.`nm_talento` AS `nm_talento`, `t`.`ds_talento` AS `ds_talento`, `ct`.`lvl_talento` AS `lvl_talento` FROM (`tbl_classe_talentos` `ct` join `tbl_talentos` `t` on(`ct`.`cd_talento` = `t`.`cd_talento`)) ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para view `vw_vantagens`
 --
 DROP TABLE IF EXISTS `vw_vantagens`;
 
@@ -358,13 +515,13 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 
 --
--- Índices para tabela `tbl_classe`
+-- Índices de tabela `tbl_classe`
 --
 ALTER TABLE `tbl_classe`
   ADD PRIMARY KEY (`cd_classe`);
 
 --
--- Índices para tabela `tbl_classe_desvantagens`
+-- Índices de tabela `tbl_classe_desvantagens`
 --
 ALTER TABLE `tbl_classe_desvantagens`
   ADD PRIMARY KEY (`cd`),
@@ -372,7 +529,15 @@ ALTER TABLE `tbl_classe_desvantagens`
   ADD KEY `cd_desvantagem` (`cd_desvantagem`);
 
 --
--- Índices para tabela `tbl_classe_vantagens`
+-- Índices de tabela `tbl_classe_talentos`
+--
+ALTER TABLE `tbl_classe_talentos`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_talento` (`cd_talento`),
+  ADD KEY `fk_classe` (`cd_classe`);
+
+--
+-- Índices de tabela `tbl_classe_vantagens`
 --
 ALTER TABLE `tbl_classe_vantagens`
   ADD PRIMARY KEY (`cd`),
@@ -380,32 +545,46 @@ ALTER TABLE `tbl_classe_vantagens`
   ADD KEY `cd_vantagem` (`cd_vantagem`);
 
 --
--- Índices para tabela `tbl_desvantagens`
+-- Índices de tabela `tbl_desvantagens`
 --
 ALTER TABLE `tbl_desvantagens`
   ADD PRIMARY KEY (`cd_desvantagem`);
 
 --
--- Índices para tabela `tbl_imgclasse`
+-- Índices de tabela `tbl_imgclasse`
 --
 ALTER TABLE `tbl_imgclasse`
   ADD PRIMARY KEY (`cd`),
   ADD KEY `cd_classe` (`cd_classe`);
 
 --
--- Índices para tabela `tbl_raca`
+-- Índices de tabela `tbl_raca`
 --
 ALTER TABLE `tbl_raca`
   ADD PRIMARY KEY (`cd_raca`);
 
 --
--- Índices para tabela `tbl_vantagens`
+-- Índices de tabela `tbl_talentos`
+--
+ALTER TABLE `tbl_talentos`
+  ADD PRIMARY KEY (`cd_talento`),
+  ADD UNIQUE KEY `unique_talento` (`nm_talento`,`ds_talento`);
+
+--
+-- Índices de tabela `tbl_tamanho`
+--
+ALTER TABLE `tbl_tamanho`
+  ADD PRIMARY KEY (`cd_tamanho`),
+  ADD UNIQUE KEY `nm_tamanho` (`nm_tamanho`);
+
+--
+-- Índices de tabela `tbl_vantagens`
 --
 ALTER TABLE `tbl_vantagens`
   ADD PRIMARY KEY (`cd_vantagem`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT para tabelas despejadas
 --
 
 --
@@ -419,6 +598,12 @@ ALTER TABLE `tbl_classe`
 --
 ALTER TABLE `tbl_classe_desvantagens`
   MODIFY `cd` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT de tabela `tbl_classe_talentos`
+--
+ALTER TABLE `tbl_classe_talentos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de tabela `tbl_classe_vantagens`
@@ -442,7 +627,19 @@ ALTER TABLE `tbl_imgclasse`
 -- AUTO_INCREMENT de tabela `tbl_raca`
 --
 ALTER TABLE `tbl_raca`
-  MODIFY `cd_raca` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cd_raca` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de tabela `tbl_talentos`
+--
+ALTER TABLE `tbl_talentos`
+  MODIFY `cd_talento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+
+--
+-- AUTO_INCREMENT de tabela `tbl_tamanho`
+--
+ALTER TABLE `tbl_tamanho`
+  MODIFY `cd_tamanho` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `tbl_vantagens`
@@ -451,25 +648,32 @@ ALTER TABLE `tbl_vantagens`
   MODIFY `cd_vantagem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
--- Restrições para despejos de tabelas
+-- Restrições para tabelas despejadas
 --
 
 --
--- Limitadores para a tabela `tbl_classe_desvantagens`
+-- Restrições para tabelas `tbl_classe_desvantagens`
 --
 ALTER TABLE `tbl_classe_desvantagens`
   ADD CONSTRAINT `tbl_classe_desvantagens_ibfk_1` FOREIGN KEY (`cd_classe`) REFERENCES `tbl_classe` (`cd_classe`),
   ADD CONSTRAINT `tbl_classe_desvantagens_ibfk_2` FOREIGN KEY (`cd_desvantagem`) REFERENCES `tbl_desvantagens` (`cd_desvantagem`);
 
 --
--- Limitadores para a tabela `tbl_classe_vantagens`
+-- Restrições para tabelas `tbl_classe_talentos`
+--
+ALTER TABLE `tbl_classe_talentos`
+  ADD CONSTRAINT `fk_classe` FOREIGN KEY (`cd_classe`) REFERENCES `tbl_classe` (`cd_classe`),
+  ADD CONSTRAINT `fk_talento` FOREIGN KEY (`cd_talento`) REFERENCES `tbl_talentos` (`cd_talento`);
+
+--
+-- Restrições para tabelas `tbl_classe_vantagens`
 --
 ALTER TABLE `tbl_classe_vantagens`
   ADD CONSTRAINT `tbl_classe_vantagens_ibfk_1` FOREIGN KEY (`cd_classe`) REFERENCES `tbl_classe` (`cd_classe`),
   ADD CONSTRAINT `tbl_classe_vantagens_ibfk_2` FOREIGN KEY (`cd_vantagem`) REFERENCES `tbl_vantagens` (`cd_vantagem`);
 
 --
--- Limitadores para a tabela `tbl_imgclasse`
+-- Restrições para tabelas `tbl_imgclasse`
 --
 ALTER TABLE `tbl_imgclasse`
   ADD CONSTRAINT `tbl_imgclasse_ibfk_1` FOREIGN KEY (`cd_classe`) REFERENCES `tbl_classe` (`cd_classe`);

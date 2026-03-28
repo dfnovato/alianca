@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="./css/estilo.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet" />
-    <title>RPG - Classes</title>
 </head>
 
 <body class="cor1">
@@ -26,9 +25,7 @@ $consulta->execute();
 <main>
     <div class="container" id="post-container">
         <?php while ($exibe = $consulta->fetch(PDO::FETCH_ASSOC)) { ?>
-            <a href="modalclass.php?cd=<?php echo $exibe['cd_classe']; ?>" 
-               onclick="abrirModal(event, <?php echo $exibe['cd_classe']; ?>)" 
-               class="divlv1 link1 <?php echo "link" . htmlspecialchars($exibe['tipo_classe']); ?>">
+            <a href="modalclass.php?cd=<?php echo $exibe['cd_classe']; ?>" class="divlv1 link1 <?php echo "link" . htmlspecialchars($exibe['tipo_classe']); ?>">
                 <div>
                     <img class="foto" src="./img/<?php echo htmlspecialchars($exibe['img_classe']); ?>" alt="">
                     <div class="textinho">
@@ -43,57 +40,10 @@ $consulta->execute();
     <div id="loading-message" style="display:none; text-align:center; margin:20px;">Carregando...</div>
 </main>
 
-<div id="minhaModal" class="modal-shadow">
-    <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <div id="modal-loader"></div>
-    </div>
-</div>
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    // FUNÇÃO DO MODAL
-    function abrirModal(e, idClasse) {
-        // Impede que o link abra a página modalclass.php
-        if(e) e.preventDefault();
-
-        const modal = document.getElementById('minhaModal');
-        const loader = document.getElementById('modal-loader');
-
-        modal.style.display = "block";
-        loader.innerHTML = "<h2 style='color:white; text-align:center;'>Carregando atributos da classe...</h2>";
-
-        fetch('modalclass.php?cd=' + idClasse)
-            .then(response => response.text())
-            .then(html => {
-                loader.innerHTML = html;
-                
-                // IMPORTANTE: Se o seu slide.php tiver scripts, 
-                // eles podem precisar ser reiniciados aqui.
-            })
-            .catch(err => {
-                loader.innerHTML = "Erro ao carregar os dados.";
-                console.error(err);
-            });
-    }
-
-    // FECHAR MODAL
-    document.querySelector(".close-button").onclick = () => {
-        document.getElementById('minhaModal').style.display = "none";
-        document.getElementById('modal-loader').innerHTML = ""; // Limpa para não pesar
-    };
-
-    // Fechar ao clicar fora do conteúdo branco
-    window.onclick = (event) => {
-        const modal = document.getElementById('minhaModal');
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    };
-
-    // INFINITE SCROLL (AJAX)
     $(document).ready(function () {
-        let offset = 8;
+        let offset = 8; // começa após os 8 primeiros
         let carregando = false;
 
         $(window).scroll(function () {
@@ -124,5 +74,6 @@ $consulta->execute();
         });
     });
 </script>
+
 </body>
 </html>

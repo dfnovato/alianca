@@ -1,20 +1,5 @@
 <?php
 
-   # ========================================================================#
-   #
-   #  Author:    Gavyn McKenzie
-   #  Version:	 1.0
-   #  Date:      16 Oct 2013
-   #  Purpose:   Resizes and saves image
-   #  Requires : Requires PHP5, GD library.
-   #  Usage Example:
-   #                     include("classes/resize_class.php");
-   #                     $crispy = new resize('images/cars/large/input.jpg',700,'/img/cache/');
-   #                     $src = $crispy -> resizeImage();
-   #
-   #
-   # ========================================================================#
-
 
 		Class resize {
 
